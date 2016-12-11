@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DBmanager.h"
 
-@interface ViewController : UIViewController
+#import "EditInforViewController.h"
+@interface ViewController : UITableViewController
+@property (nonatomic, strong) DBmanager *dbManager;
+
+@property (nonatomic, strong) NSArray *arrPeopleInfo;
+@property (nonatomic) int recordIDToEdit;
+
+-(void)loadData;
+- (IBAction)addNewRecord:(id)sender;
 
 
 @end
